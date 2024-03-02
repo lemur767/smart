@@ -5,9 +5,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from "/public/assets/Images/landscape_logo.png"
-import { SignedIn } from '@clerk/nextjs'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { navLinks } from '@/constants'
 import { usePathname } from 'next/navigation'
+import { Button } from '../ui/button'
 
 
 const Sidebar = () => {
@@ -18,8 +19,9 @@ const Sidebar = () => {
         <Link href="/" className="sidebar-logo">
           <Image src={logo} alt="logo" width={620} height={480} />
         </Link>
+
         <nav className="sidebar-nav">
-          <SignedIn>
+          <SignedIn>  
             <ul className="sidebar-nav_elements">
               {navLinks.map((link) => {
                 const isActive = link.route === pathname;
@@ -44,8 +46,18 @@ const Sidebar = () => {
                   </li>
                 );
               })}
+              <li className="flex-center cursor-pointer gap-2 p-4">
+                <UserButton afterSignOutUrl="/" showName/>
+
+              </li>
             </ul>
           </SignedIn>
+          
+          <SignedOut>
+              <Button asChild className="button bg-purple-gradient bg-cover">
+                <Link href="/sign-in">Login</Link>
+              </Button>
+            </SignedOut>
         </nav>
       </div>
     </aside>
