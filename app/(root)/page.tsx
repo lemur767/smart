@@ -1,11 +1,13 @@
+"use client";
+
+import Robot from "@/components/Spline";
 
 const Home = () => {
+  
+  
   return (
     <div>
-    <p>Home</p>
-
-      
-    
+      <Robot/>
       </div>
   )
 }
