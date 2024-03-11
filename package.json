@@ -16,6 +16,7 @@
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.63",
     "class-variance-authority": "^0.7.0",
+    "cloudinary": "^2.0.3",
     "clsx": "^2.1.0",
     "create-react-class": "^15.7.0",
     "lucide-react": "^0.344.0",
