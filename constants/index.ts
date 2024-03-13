@@ -125,7 +125,7 @@ export const navLinks = [
       title: "Restore Image",
       subTitle: "Refine images by removing noise and imperfections",
       config: { restore: true },
-      icon: "image.svg",
+      icon: "/assets/icons/image.svg",
     },
     removeBackground: {
       type: "removeBackground",
