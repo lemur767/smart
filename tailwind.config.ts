@@ -1,15 +1,14 @@
-import type { Config } from "tailwindcss"
-
-const config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
-  theme: { 
+  theme: {
     container: {
       center: true,
       padding: "2rem",
@@ -69,6 +68,10 @@ const config = {
       fontFamily: {
         IBMPlex: ["var(--font-ibm-plex)"],
       },
+      backgroundImage: {
+        "purple-gradient": "url('/assets/images/gradient-bg.svg')",
+        banner: "url('/assets/images/banner-bg.png')",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -91,6 +94,4 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
-
-export default config
+};
