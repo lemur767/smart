@@ -76,7 +76,7 @@
 }
 
 .auth {
-  @apply flex-center min-h-screen w-full bg-purple-100
+  @apply flex-center min-h-screen w-full bg-black
 }
 
 .root {
@@ -376,4 +376,24 @@
 }
 .cl-internal-k5atl{
   color: #c70a9e;
+}
+.cl-rootBox{
+  margin:4px;
+  padding: 8px;
+}
+.sign-un-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 4px;
+  padding: 8px;
+  height: 100%;
+  width:fit-content;
+  background-color: black;
+}
+.threed-asset {
+  display: flex;
+  flex-direction: row;
 }
